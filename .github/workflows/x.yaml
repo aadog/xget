@@ -1,16 +1,14 @@
 # 触发 workflow 的事件
+name: test
 on:
   [push]
 # 一个workflow由执行的一项或多项job
 jobs:
-  # 一个job任务，任务名为build
   build:
-    #运行在最新版ubuntu系统中
     runs-on: ubuntu-latest
-    #步骤合集
     steps:
-      #新建一个名为checkout_actions的步骤
-      - name: checkout_actions
-        run: |
-          echo "hello"
-      #使用建一个名为setup-node的步骤
+      - uses: actions/checkout@v2
+      - uses: pguyot/arm-runner-action@v2
+        with:
+          commands: |
+            gcc --version
