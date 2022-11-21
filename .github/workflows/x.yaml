@@ -11,4 +11,4 @@ jobs:
       - uses: pguyot/arm-runner-action@v2
         with:
           commands: |
-            gcc --version
+            uname -a
