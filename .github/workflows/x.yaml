@@ -10,4 +10,5 @@ jobs:
       - run:
           sudo apt update&&
           sudo apt install qemu-user-static -y&&
-          sudo apt install qemu-user-binfmt -y
+          sudo apt install qemu-user-binfmt -y&&
+          update-binfmts --display
