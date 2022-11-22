@@ -7,8 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: pguyot/arm-runner-action@v2
-        with:
-          commands: |
-            gcc -v
+      - Run:
+          sudo apt update
+          sudo apt install qemu-user-static
+          sudo apt install qemu-user-binfmt
