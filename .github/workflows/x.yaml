@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      commands: |
+      run: |
         gcc -v
 #      - uses: actions/checkout@v2
 #      - uses: pguyot/arm-runner-action@v2
