@@ -14,7 +14,7 @@ jobs:
           update-binfmts --display
       - run:
           sudo apt install debootstrap -y&&
-          sudo qemu-debootstrap --arch armel stable ~/armel-chroot
+          sudo qemu-debootstrap --arch armel stable ~/armel-chroot&&
           sudo cp /usr/bin/qemu-arm-static ~/armel-chroot/usr/bin/qemu-arm-static&&
           sudo chroot ~/armel-chroot qemu-arm-static /bin/bash&&
           uname -m
