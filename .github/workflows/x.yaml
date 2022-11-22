@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo '1111'
+        run: |
+          gcc -v
 
 #      - uses: actions/checkout@v2
 #      - uses: pguyot/arm-runner-action@v2
