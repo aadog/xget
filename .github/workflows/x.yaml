@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: test
         run: |
-          gcc -v
+          apt update
+          apt install qemu
 
 #      - uses: actions/checkout@v2
 #      - uses: pguyot/arm-runner-action@v2
