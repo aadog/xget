@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run:
-          sudo apt update
-          sudo apt install qemu-user-static
-          sudo apt install qemu-user-binfmt
+          sudo apt update\
+          sudo apt install qemu-user-static -y\
+          sudo apt install qemu-user-binfmt -y
